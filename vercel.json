@@ -1,16 +1,9 @@
 {
   "version": 2,
-  "name": "doce-ai",
   "builds": [
     {
       "src": "**/*",
       "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ],
   "headers": [
