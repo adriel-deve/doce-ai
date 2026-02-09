@@ -1,0 +1,22 @@
+{
+  "name": "doce-ai",
+  "version": "1.0.0",
+  "description": "Doce - Sua Assistente IA com rede de agentes inteligentes",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SEU_USUARIO/doce-ai.git"
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "agents",
+    "assistant"
+  ],
+  "author": "Adrie",
+  "license": "MIT"
+}

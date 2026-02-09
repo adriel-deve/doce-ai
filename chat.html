@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce - Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="chat-page">
+    <!-- Sidebar de Contatos -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span style="font-size: 1.5rem;">🍬</span>
+            <h2>Doce</h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Pesquisar conversas..." id="searchInput">
+        </div>
+
+        <div class="contacts-list" id="contactsList">
+            <!-- Contatos serão inseridos via JavaScript -->
+        </div>
+    </aside>
+
+    <!-- Área Principal do Chat -->
+    <main class="chat-main">
+        <header class="chat-header" id="chatHeader">
+            <div class="chat-header-avatar" id="currentAvatar">🍬</div>
+            <div class="chat-header-info">
+                <h3 id="currentContactName">Doce</h3>
+                <span class="chat-header-status" id="currentStatus">Online</span>
+            </div>
+        </header>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Mensagens serão inseridas via JavaScript -->
+        </div>
+
+        <!-- Menu de Anexos -->
+        <div class="attachment-menu" id="attachmentMenu">
+            <div class="attachment-option" onclick="attachFile('photo')">
+                <div class="attachment-option-icon photo">📷</div>
+                <span>Foto</span>
+            </div>
+            <div class="attachment-option" onclick="attachFile('video')">
+                <div class="attachment-option-icon video">🎥</div>
+                <span>Vídeo</span>
+            </div>
+            <div class="attachment-option" onclick="attachFile('document')">
+                <div class="attachment-option-icon document">📄</div>
+                <span>Documento</span>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <button class="attachment-btn" id="attachmentBtn" onclick="toggleAttachmentMenu()">
+                📎
+            </button>
+            <textarea
+                class="chat-input"
+                id="messageInput"
+                placeholder="Digite sua mensagem..."
+                rows="1"
+                onkeydown="handleKeyDown(event)"
+            ></textarea>
+            <button class="send-btn" onclick="sendMessage()">
+                ➤
+            </button>
+        </div>
+
+        <!-- Input de arquivo oculto -->
+        <input type="file" id="fileInput" style="display: none" onchange="handleFileSelect(event)">
+    </main>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
