@@ -27,3 +27,5 @@ build/
 # API Keys (nunca commitar!)
 config.local.js
 secrets.js
+
+.vercel
